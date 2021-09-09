@@ -5,6 +5,13 @@ Team: Suffering IRL = Spencer DeMera, Edmond Tongyou, Joshua Elmer, Kevin La, Ab
 Intro:
 
 Contents:
+README.txt
+NOTES.txt
+index.html
+styles.css
+drawing.js
+sketching.js
+p5.js
 
 External Requirments:
 
