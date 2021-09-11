@@ -22,3 +22,6 @@
   CSS
     - Style everything to center
     - Style to have uniform font/color
+
+
+===== JS =====
