@@ -1,3 +1,10 @@
+/*
+    Author(S): Spencer DeMera
+    Authors Contact(s): spencer.demera@csu.fullerton.edu
+    Description: This is the CSS file for the main index.html page. This file provides
+    simple styling of text and UI of the html elements for a better viewing experience.
+*/
+
 body {
     box-sizing: border-box;
     margin: 0;
