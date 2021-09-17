@@ -5,6 +5,12 @@
     simple styling of text and UI of the html elements for a better viewing experience.
 */
 
+html {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 body {
     box-sizing: border-box;
     margin: 0;
