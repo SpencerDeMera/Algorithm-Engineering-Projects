@@ -29,14 +29,14 @@ function setup() // P5 Setup Fcn, must be called for Anim to work.
     draw_grid( 10, 50, 'white', 'blue' ); // Calls fcn in another (loaded) file.
 }
 
-var g_bot = { dir:0, x:20, y:20, color:100 }; // Dir is 0..3 clock, w 0 up.
+var g_bot = { dir:0, x:20, y:20, color:"100" }; // Dir is 0..3 clock, w 0 up.
 var g_box = { t:1, hgt:39, l:1, wid:59 }; // Box in which bot can move.
+var flag = true;
 var counter = 0;
 
 function move_bot( ) // Move the bot in new direction & update color.
 {
     let random_color = 0;
-    let flag = true;
     let facing = g_bot.dir;
     if (counter === 0)
     {
@@ -123,7 +123,7 @@ function move_bot( ) // Move the bot in new direction & update color.
             else if(facing === 1)
             {
                 dx = 1;
-                dir = 1;
+                dir = 2;
             }
 
             // Turn Left, Face West
@@ -156,13 +156,39 @@ function move_bot( ) // Move the bot in new direction & update color.
             else
             {
                 dx = 1;
-                dir = 1;
+                dir = 2;
             }
             break;
         }
-        
+
+        // East
+        case 2 :
+        {
+            // Straight
+            if(facing === 2)
+            {
+                dx = 1;
+                --counter;
+            }
+
+            // Turn Right, Face South
+            else if(facing === 1)
+            {
+                dy = 1;
+                dir = 1;
+            }
+
+            // Turn Left, Face North
+            else
+            {
+                dy = -1;
+                dir = 0;
+            }
+            break;
+        }        
+
         // West
-        case 2 : 
+        case 3 : 
         { 
             // Straight
             if(facing === 2)
@@ -182,46 +208,20 @@ function move_bot( ) // Move the bot in new direction & update color.
             else
             {
                 dy = 1;
-                dir = 2;
+                dir = 1;
             }
             break;
         }
 
-        // East
-        case 3 :
-        {
-            // Straight
-            if(facing === 2)
-            {
-                dx = 1;
-                --counter;
-            }
 
-            // Turn Right, Face South
-            else if(facing === 1)
-            {
-                dy = 1;
-                dir = 2;
-            }
-
-            // Turn Left, Face North
-            else
-            {
-                dy = -1;
-                dir = 0;
-            }
-            break;
-        }
     }
 
 
     let x = (dx + g_bot.x + g_box.wid) % g_box.wid; // Move-x.  Ensure positive b4 mod.
     let y = (dy + g_bot.y + g_box.hgt) % g_box.hgt; // Ditto y.
-    let color = g_bot.color; // Incr color in nice range.
     g_bot.x = x; // Update bot x.
     g_bot.y = y;
     g_bot.dir = dir;
-    g_bot.color = color;
     //console.log( "bot x,y,dir,clr = " + x + "," + y + "," + dir + "," +  color );
 }
 
