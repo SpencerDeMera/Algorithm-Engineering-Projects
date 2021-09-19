@@ -29,7 +29,7 @@ function setup() // P5 Setup Fcn, must be called for Anim to work.
     draw_grid( 10, 50, 'white', 'blue' ); // Calls fcn in another (loaded) file.
 }
 
-var g_bot = { dir:0, x:20, y:20, color:"100" }; // Dir is 0..3 clock, w 0 up.
+var g_bot = { dir:0, x:30, y:20, color:"100" }; // Dir is 0..3 clock, w 0 up.
 var g_box = { t:1, hgt:39, l:1, wid:59 }; // Box in which bot can move.
 var flag = true;
 var counter = 0;
@@ -100,8 +100,8 @@ function move_bot( ) // Move the bot in new direction & update color.
     // dx -> -1 = W
     // dx -> 1 = E
     // N -> 0
-    // E -> 1
-    // S -> 2
+    // S -> 1
+    // E -> 2
     // W -> 3
     // 12 states
     let dx = 0;
