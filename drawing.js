@@ -9,9 +9,9 @@
 function draw_grid(rminor, rmajor, rstroke, rfill) {
     stroke(rstroke);
     fill(rfill);
-    let size = gridCanvas.cellSize;
-    let width = gridCanvas.wid * size;
-    let height = gridCanvas.hgt * size;
+    let sz = g_canvas.cell_size;
+    let width = g_canvas.wid * sz;
+    let height = g_canvas.hgt * sz;
 
     for (var x = 0; x < width; x+=rminor) {
         let bigLinep = (x % rmajor == 0);
