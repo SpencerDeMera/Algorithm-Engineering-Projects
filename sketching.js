@@ -260,8 +260,7 @@ function draw_bot( ) // Convert bot pos to grid pos & draw bot cell.
     let cpix_rgb = get_rgb( cpix );
     if (0 != cpix_rgb) // This cell has color?
     { // Turn off color, both interior (fill) and border (stroke).
-        fill( 0 );
-        stroke( 0 );
+        stroke( 'white' );
     }
     else { stroke( 'white' ); } // Else none, Bot is visiting, so color border white.
     // Paint the cell.
