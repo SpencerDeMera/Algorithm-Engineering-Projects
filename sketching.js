@@ -61,7 +61,7 @@ function move_bot( ) // Move the bot in new direction & update color.
             // Turn Left, black
             case 0 : 
             {   
-                g_bot.color = "0000000"; 
+                g_bot.color = "100000"; 
                 ++counter; 
                 facing = 0;
                 break; 
