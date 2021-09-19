@@ -4,7 +4,10 @@ Team:
   Suffering IRL = Spencer DeMera, Edmond Tongyou, Joshua Elmer, Kevin La, Abhinav Arora
 
 Intro:
-  - This project draws a grid and runs an invisible bot from cell to cell on the grid. As the bot moves it randomly changes the colors  of the previously entered cell. When it reaches a cell with a color it completes an action (turn left/right or goes striaght for a designated amount of time) based on the color it touches.
+  - This project draws a grid and runs an invisible bot from cell to cell on the grid. As the bot moves 
+      it randomly changes the colors  of the previously entered cell. When it reaches a cell with a color 
+      it completes an action (turn left/right or goes striaght for a designated amount of time) based on 
+      the color it touches.
 
 Zip Contents:
   File README.txt. This file.
@@ -12,7 +15,8 @@ Zip Contents:
   File index.html. Main HTML file and Front-End of project.
   File styles.css. Main CSS file.
   File drawing.js. Includes basic P5 drawing utilies functions.
-  File sketching.js. Includes all user defined functions for I/O, ant control and logic, and various supporting functions / controls.
+  File sketching.js. Includes all user defined functions for I/O, ant control and logic, and various 
+      supporting functions / controls.
   File p5.js. P5.js Library file.
 
 Setup and Installation:
