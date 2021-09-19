@@ -1,5 +1,5 @@
 /*
-    Author(s): Spencer DeMera, Edmond Tongyou, Joshua Elmer
+    Author(s): Spencer DeMera, Edmond Tongyou, Joshua Elmer, Kevin La
     Auhtors Contact(s): spencer.demera@csu.fullerton.edu, tongyouedmond@csu.fullerton.edu, joshuaelmer@csu.fullerton.edu
     Description: This file provides all of the logic for our ant AI, ant controls, and grid controls.
     Wihtin are all necessary functions for ant animation.
