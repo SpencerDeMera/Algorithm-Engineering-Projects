@@ -40,7 +40,7 @@ function move_bot( ) // Move the bot in new direction & update color.
     let facing = g_bot.dir;
     if (counter === 0)
     {
-        random_color = (round (3 * random( )));
+        random_color = (round (2 * random( )));
         flag = true;
     }
     else if (counter > 0 && g_bot.color === "FFFF00")
@@ -50,7 +50,7 @@ function move_bot( ) // Move the bot in new direction & update color.
     }
     else
     {
-        random_color = (round (4 * random( )));
+        random_color = (round (3 * random( )));
         flag = true;
     }
 
