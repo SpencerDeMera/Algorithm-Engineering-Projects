@@ -16,12 +16,20 @@
     function mousePressed( ) // P5 fcn, called for every mouse-press.
 */
 
-var gridCanvas = { cellSize: 10, wid:60, hgt: 40 };
+var g_canvas = { cell_size: 10, wid:60, hgt: 40 }; // JS Global var, w canvas size info.
+var g_frame_cnt = 0; // Setup a P5 display-frame counter, to do anim
+var g_frame_mod = 24; // Update ever 'mod' frames.
+var g_stop = 0; // Go by default.
 
-function setup() {
-    let size = gridCanvas.cellSize;
-    let width = size * gridCanvas.wid;
-    let height = size * gridCanvas.hgt;
-    createCanvas(width, height);
-    drawGrid( 10, 50, 'white', 'blue' );
+function setup() // P5 Setup Fcn, must be called for Anim to work.
+{
+    let sz = g_canvas.cell_size;
+    let width = sz * g_canvas.wid;  // Our 'canvas' uses cells of given size, not 1x1 pixels.
+    let height = sz * g_canvas.hgt;
+    createCanvas( width, height );  // Make a P5 canvas.
+    draw_grid( 10, 50, 'white', 'blue' ); // Calls fcn in another (loaded) file.
 }
+
+var g_bot = { dir:3, x:20, y:20, color:100 }; // Dir is 0..3 clock, w 0 up.
+var g_box = { t:1, hgt:39, l:1, wid:59 }; // Box in which bot can move.
+

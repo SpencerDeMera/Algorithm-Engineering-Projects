@@ -6,7 +6,7 @@
     entire ant and controls.
 */
 
-function drawGrid(rminor, rmajor, rstroke, rfill) {
+function draw_grid(rminor, rmajor, rstroke, rfill) {
     stroke(rstroke);
     fill(rfill);
     let size = gridCanvas.cellSize;
