@@ -32,8 +32,6 @@ function setup() // P5 Setup Fcn, must be called for Anim to work.
 
 var g_bot = { dir:0, x:20, y:20, color:100 }; // Dir is 0..3 clock, w 0 up.
 var g_box = { t:1, hgt:39, l:1, wid:59 }; // Box in which bot can move.
-<<<<<<< HEAD
-=======
 var counter = 0;
 
 function move_bot( ) // Move the bot in new direction & update color.
@@ -319,4 +317,3 @@ function mousePressed( ) // P5 fcn, called for every mouse-press.
     draw_bot( );
 }
 
->>>>>>> cfd67d127794d0f256cf38c2b9977862cfb6076a
