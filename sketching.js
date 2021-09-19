@@ -30,6 +30,6 @@ function setup() // P5 Setup Fcn, must be called for Anim to work.
     draw_grid( 10, 50, 'white', 'blue' ); // Calls fcn in another (loaded) file.
 }
 
-var g_bot = { dir:3, x:20, y:20, color:100 }; // Dir is 0..3 clock, w 0 up.
+var g_bot = { dir:0, x:20, y:20, color:100 }; // Dir is 0..3 clock, w 0 up.
 var g_box = { t:1, hgt:39, l:1, wid:59 }; // Box in which bot can move.
 
