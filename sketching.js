@@ -235,7 +235,7 @@ function paint_cell_interior( cell ) // Paint grid-cell insides, with pre-set co
     rect( x_in, y_in, wid, wid );
 }
 
-function draw_bot( ) // Convert bot pos to grid pos & draw bot cell.
+function draw_bot() // Convert bot pos to grid pos & draw bot cell.
 {
     let sz = g_canvas.cell_size;
     let x_in = 1+ g_bot.x*sz; // Set x one pixel inside the sz-by-sz cell.
