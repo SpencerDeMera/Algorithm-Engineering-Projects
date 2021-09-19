@@ -3,7 +3,6 @@
     Auhtors Contact(s): spencer.demera@csu.fullerton.edu, tongyouedmond@csu.fullerton.edu, joshuaelmer@csu.fullerton.edu
     Description: This file provides all of the logic for our ant AI, ant controls, and grid controls.
     Wihtin are all necessary functions for ant animation.
-
     function setup() // P5 Setup Fcn, must be called for Anim to work.
     function move_bot( ) // Move the bot in new direction & update color.
     function get_rgb( cpix ) // Get RGB integer color at canvas pixel pos.
@@ -16,7 +15,7 @@
     function mousePressed( ) // P5 fcn, called for every mouse-press.
 */
 
-var g_canvas = { cell_size:10, wid:64, hgt:48 }; // JS Global var, w canvas size info.
+var g_canvas = { cell_size:10, wid:60, hgt: 40 }; // JS Global var, w canvas size info.
 var g_frame_cnt = 0; // Setup a P5 display-frame counter, to do anim
 var g_frame_mod = 24; // Update ever 'mod' frames.
 var g_stop = 0; // Go by default.
@@ -27,17 +26,18 @@ function setup() // P5 Setup Fcn, must be called for Anim to work.
     let width = sz * g_canvas.wid;  // Our 'canvas' uses cells of given size, not 1x1 pixels.
     let height = sz * g_canvas.hgt;
     createCanvas( width, height );  // Make a P5 canvas.
-    draw_grid( 10, 50, 'white', 'yellow' ); // Calls fcn in another (loaded) file.
+    draw_grid( 10, 50, 'white', 'blue' ); // Calls fcn in another (loaded) file.
 }
-// Here are some more simple multi-slot objects we use.
-var g_bot = { dir:0, x:20, y:20, color:100 }; // Dir is 0..7 clock, w 0 up.
-var g_box = { t:1, hgt:47, l:1, wid:63 }; // Box in which bot can move.
+
+var g_bot = { dir:0, x:20, y:20, color:100 }; // Dir is 0..3 clock, w 0 up.
+var g_box = { t:1, hgt:39, l:1, wid:59 }; // Box in which bot can move.
 var counter = 0;
 
 function move_bot( ) // Move the bot in new direction & update color.
 {
-    let random_color;
+    let random_color = 0;
     let flag = true;
+    let facing = g_bot.dir;
     if (counter === 0)
     {
         random_color = (round (3 * random( )));
@@ -45,6 +45,7 @@ function move_bot( ) // Move the bot in new direction & update color.
     }
     else if (counter > 0 && g_bot.color === "FFFF00")
     {
+        facing = 2;
         flag = false;
     }
     else
@@ -53,9 +54,6 @@ function move_bot( ) // Move the bot in new direction & update color.
         flag = true;
     }
 
-    let dx = 0;
-    let dy = 0;
-    let facing = g_bot.dir;
     if (flag === true)
     {
         switch (random_color)
@@ -106,6 +104,8 @@ function move_bot( ) // Move the bot in new direction & update color.
     // S -> 2
     // W -> 3
     // 12 states
+    let dx = 0;
+    let dy = 0;
     let dir = g_bot.dir;
     switch (g_bot.dir)
     {
@@ -217,9 +217,12 @@ function move_bot( ) // Move the bot in new direction & update color.
 
     let x = (dx + g_bot.x + g_box.wid) % g_box.wid; // Move-x.  Ensure positive b4 mod.
     let y = (dy + g_bot.y + g_box.hgt) % g_box.hgt; // Ditto y.
+    let color = g_bot.color; // Incr color in nice range.
     g_bot.x = x; // Update bot x.
     g_bot.y = y;
     g_bot.dir = dir;
+    g_bot.color = color;
+    //console.log( "bot x,y,dir,clr = " + x + "," + y + "," + dir + "," +  color );
 }
 
 function get_rgb( cpix ) // Get RGB integer color at canvas pixel pos.
