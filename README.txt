@@ -29,7 +29,7 @@ Features:
 
 Known Bugs / Issues:
  -- Bugs / Issues:
-    - 
+    - Sometimes the bot draws a white space instead of the correct color (no idea why).
     
  -- Warnings:
     - 
