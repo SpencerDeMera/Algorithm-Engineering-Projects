@@ -225,18 +225,6 @@ function move_bot( ) // Move the bot in new direction & update color.
     //console.log( "bot x,y,dir,clr = " + x + "," + y + "," + dir + "," +  color );
 }
 
-function get_rgb( cpix ) // Get RGB integer color at canvas pixel pos.
-{ // Cpix needs slots .x, .y, (canvas pixel coords).
-    let acolors = get( cpix.x, cpix.y ); // Get pixel color [RGBA] array.
-    let pix_rgb =  // Ignore A = acolors[3], the transparency.
-        (256
-         * (256 * (acolors[ 2 ]) // B
-            +  acolors[ 1 ])) // G
-        + acolors[ 0 ]; // R
-    //console.log( "acolors,pix_rgb = " + acolors + ", " + pix_rgb );
-    return pix_rgb;
-}
-
 function paint_cell_interior( cell ) // Paint grid-cell insides, with pre-set color.
 { // Skip cell 1-pixel border, just paint insides.
     // Cell needs slots .x, .y, (canvas pixel coords) and .cell_size (in pixels);
@@ -257,12 +245,7 @@ function draw_bot( ) // Convert bot pos to grid pos & draw bot cell.
     // Fill 'color': its a keystring, or a hexstring like "#5F", etc.  See P5 docs.
     fill( "#" + g_bot.color ); // Concat string, auto-convert the number to string.
     //console.log( "x_in,y_in = " + x + "," + y );
-    let cpix_rgb = get_rgb( cpix );
-    if (0 != cpix_rgb) // This cell has color?
-    { // Turn off color, both interior (fill) and border (stroke).
-        stroke( 'white' );
-    }
-    else { stroke( 'white' ); } // Else none, Bot is visiting, so color border white.
+
     // Paint the cell.
     let cell = { x:g_bot.x, y:g_bot.y, cell_size:sz }; // new obj.
     paint_cell_interior( cell );
