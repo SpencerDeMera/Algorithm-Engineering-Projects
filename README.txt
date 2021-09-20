@@ -4,10 +4,7 @@ Team:
   Suffering IRL = Spencer DeMera, Edmond Tongyou, Joshua Elmer, Kevin La, Abhinav Arora
 
 Intro:
-  - This project draws a grid and runs an invisible bot from cell to cell on the grid. As the bot moves 
-      it randomly changes the colors  of the previously entered cell. When it reaches a cell with a color 
-      it completes an action (turn left/right or goes striaght for a designated amount of time) based on 
-      the color it touches.
+  - This project draws a grid and runs an invisible bot from cell to cell on the grid. As the bot moves it randomly changes the colors of the previously entered cell. When it reaches a cell with a color it completes an action (turn left/right or goes striaght for a designated amount of time) based on the color it touches.
 
 Zip Contents:
   File README.txt. This file.
@@ -33,6 +30,5 @@ Features:
 
 Known Bugs / Issues:
  -- Warnings:
-    - When going straight as yellow, it might turn around and quickly over paint itself so it appears as if
-        it is going straight much further than it should be.
+    - When going straight as yellow, it might turn around and quickly over paint itself so it appears as if it is going straight much further than it should be.
     
