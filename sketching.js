@@ -5,7 +5,6 @@
     Wihtin are all necessary functions for ant animation.
     function setup() // P5 Setup Fcn, must be called for Anim to work.
     function move_bot( ) // Move the bot in new direction & update color.
-    function get_rgb( cpix ) // Get RGB integer color at canvas pixel pos.
     function paint_cell_interior( cell ) // Paint grid-cell insides, with pre-set color.
     function draw_bot( ) // Convert bot pos to grid pos & draw bot cell.
     function draw_update()  // Update our display, move & draw bot cell.
