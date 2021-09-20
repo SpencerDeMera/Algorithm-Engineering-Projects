@@ -11,7 +11,6 @@ Intro:
 
 Zip Contents:
   File README.txt. This file.
-  File NOTES.txt. Text file for general group notes.
   File index.html. Main HTML file and Front-End of project.
   File styles.css. Main CSS file.
   File drawing.js. Includes basic P5 drawing utilies functions.
