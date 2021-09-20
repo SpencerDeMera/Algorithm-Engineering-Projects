@@ -37,5 +37,6 @@ Known Bugs / Issues:
     - Sometimes the bot draws a white space instead of the correct color (no idea why).
     
  -- Warnings:
-    - 
+    - When going straight as yellow, it might turn around and quickly over paint itself so it appears as if
+        it is going straight much further than it should be.
     
