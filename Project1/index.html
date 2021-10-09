@@ -1,0 +1,43 @@
+<!--
+    Author(s): Spencer DeMera
+    Authors Contact(s): spencer.demera@csu.fullerton.edu
+    Description: This is the main index.html file of the entire project. This file is repsonsible
+    for running and displaying all the nescessary js and P5.js files and controls.
+    This file is also the primary view for the end-user.
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>CPSC-335 Lark's Ant</title>
+
+        <link rel="stylesheet" href="styles.css"> <!-- stylesheet import -->
+
+        <!-- Main js files for canvas -->
+        <script src="p5.js"></script> <!-- P5.js library -->
+        <script src="sketching.js"></script> <!-- sketching js file for controls -->
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="titleContainer">
+                <h1>CPSC-335-03 Project-1: Lark’s Ant</h1>
+                <h2>Team: Suffering IRL</h2>
+            </div>
+            <div class="infoContainer">
+                <P class="text">This is our version of a Lark's Ant game!</P>
+                <br>
+            </div>
+            <div class="controlsContainer">
+                <p class="controlsTitle">Controls</p>
+                <p class="text">o- Press almost any key to toggle the game on & off</p>
+                <p class="text">o- Click mouse anywhere on the grid to force ant to a new location.</p>
+            </div>
+            <br><br><br>
+        </div>
+    </body>
+
+    <!-- drawing js file for drawing the canvas-->
+    <script src="drawing.js"></script>
+</html>

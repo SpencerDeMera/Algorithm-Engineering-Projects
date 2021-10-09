@@ -1,0 +1,62 @@
+/*
+    Author(S): Spencer DeMera
+    Authors Contact(s): spencer.demera@csu.fullerton.edu
+    Description: This is the CSS file for the main index.html page. This file provides
+    simple styling of text and UI of the html elements for a better viewing experience.
+*/
+
+html {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(221, 221, 221);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.titleContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.infoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.controlsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: rgb(224, 243, 117);
+    padding: 25px 35px;
+    border-radius: 50px;
+}
+
+.text {
+    font-weight: 600;
+}
+
+.controlsTitle {
+    font-size: 20px;
+    font-weight: 800;
+    margin-top: -3px;
+}
