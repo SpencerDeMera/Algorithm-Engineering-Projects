@@ -296,3 +296,35 @@ function mousePressed( ) // P5 fcn, called for every mouse-press.
     set_bot_pos( );
     draw_bot( );
 }
+
+function draw_grid(rminor, rmajor, rstroke, rfill) {
+    stroke(rstroke);
+    fill(rfill);
+    let sz = g_canvas.cell_size;
+    let width = g_canvas.wid * sz;
+    let height = g_canvas.hgt * sz;
+
+    for (var x = 0; x < width; x+=rminor) {
+        let bigLinep = (x % rmajor == 0);
+        let lineWeight = 1;
+        if (bigLinep) { 
+            lineWeight = 2;
+        }
+
+        strokeWeight( lineWeight );
+        line( x, 0, x, height );
+        strokeWeight( 1 );
+    } // draws x-axis of grid
+
+    for (var y = 0; y < width; y+=rminor) {
+        let bigLinep = (y % rmajor == 0);
+        let lineWeight = 1;
+        if (bigLinep) {
+            lineWeight = 2;
+        }
+
+        strokeWeight( lineWeight );
+        line( 0, y, width, y );
+        strokeWeight( 1 );
+    } // draws y-axis of grid
+}
