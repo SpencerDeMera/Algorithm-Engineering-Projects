@@ -1,1 +1,14 @@
-# CPSC-335 Algoritm Engineering
+# CPSC 335 Algorithm Engineering
+
+- - - -
+
+## Description
+
+This is a main repo for my various Algorithm Engineering projects and homeworks in CSUF's CPSC 335 class.
+- - - -
+
+## Technologies / Methodologies Used
+
+* HTML/CSS
+* P5.js
+* JavaScript
