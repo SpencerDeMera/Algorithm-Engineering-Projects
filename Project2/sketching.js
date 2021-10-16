@@ -12,7 +12,12 @@ var g_button; // Button for my input box.
 var array = []; // array for all input hexadecimal string
 var len = 16; // array length
 array.length = len; // set array length
+
+
 var insertion_arr = array.split("");
+var insertion_index1 = 0;
+var insertion_index2 = -1;
+
 var selection_arr = array.split("");
 var poresort_arr = array.split("");
 var merge_arr = array.split("");
@@ -46,67 +51,34 @@ function retrieve_input()
 // draw algos per pass and printing
 function draw_algos() 
 {
-    
-}
-
-// insertion sort algo
-function instertionSort() 
-{
-
-}
-
-// selection sort algo
-function selectionSort() 
-{
-
-}
-
-// pore sort algo
-function poreSort() 
-{
-
-}
-
-// merge sort algo
-function mergeSort() 
-{
-
-}
-
-// quick sort algo
-function quickSort() 
-{
-
-}
-
-// merge function for mergeSort
-function merge() 
-{
-
-}
-
-// swap function for partitioning
-function swap() 
-{
-
-}
-
-// function for partitioning
-function partition() 
-{
-
-}
-
-// adds new hexadecimal string input to array
-function newString() 
-{
-
+    while(flag)
+    {
+        insertionPass();
+        selectionPass();
+        porePass();
+        mergePass();
+        quickPass();
+        newString();
+    }
 }
 
 // prints passes of each algo after pause
 function insertionPass() 
 {
+    while (insertion_index1 < insertion_arr.length())
+    {
+        var current = insertion_arr[insertion_index1];
+        while (insertion_index2 >= 0 && insertion_arr[insertion_index2] > current)
+        {
+            insertion_arr[insertion_index2 + 1] = insertion_arr[insertion_index2];
+            insertion_index2 = insertion_index2 - 1;
+        }
+        insertion_arr[insertion_index2 + 1] = current;
+        insertion_index1++;
+        insertion_index2++;
 
+        break;
+    }
 }
 
 // prints passes of each algo after pause
@@ -133,14 +105,38 @@ function quickPass()
     
 }
 
+// merge function for mergeSort
+function merge() 
+{
+
+}
+
+// swap function for partitioning
+function swap() 
+{
+
+}
+
+// function for partitioning
+function partition() 
+{
+
+}
+
+// adds new hexadecimal string input to array
+function newString()
+{
+
+}
+
 // display algo name titles
-function displayAlgoTitles() 
+function displayAlgoTitles()
 {
 
 }
 
 // displays algo arrays
-function displayArr() 
+function displayArr()
 {
 
 }
