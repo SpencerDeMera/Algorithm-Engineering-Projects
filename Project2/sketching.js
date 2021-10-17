@@ -118,10 +118,10 @@ function quickPass()
     var high = quick_arr.length - 1;
     var low  = 1;
 
-    Partition(low, high);
+    partition(low, high);
 }
 
-function Partition(l, h)
+function partition(l, h)
 {
     var pivot = quick_arr[0]
     
@@ -152,18 +152,6 @@ function quickSwap(i, j)
 
 // merge function for mergeSort
 function merge() 
-{
-
-}
-
-// swap function for partitioning
-function swap() 
-{
-
-}
-
-// function for partitioning
-function partition() 
 {
 
 }
