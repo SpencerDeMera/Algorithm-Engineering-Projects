@@ -15,9 +15,11 @@ array.length = len; // set array length
 var flag = true;
 
 var insertion_arr = array.split("");
-var indexI = 0;
+var indexI = 1;
 
 var selection_arr = array.split("");
+var indexS = 0;
+
 var poresort_arr = array.split("");
 var merge_arr = array.split("");
 var quick_arr = array.split("");
@@ -64,17 +66,17 @@ function draw_algos()
 // prints passes of each algo after pause
 function insertionPass()
 {
-    let current = insertion.ar[insertion.indexI];
-    let indexJ = insertion.indexI - 1;
+    let current = insertion_arr[indexI];
+    let indexJ = indexI - 1;
 
-    while(indexJ >= 0 && insertion.ar[indexJ] > current)
+    while(indexJ >= 0 && insertion_arr[indexJ] > current)
     {
         // array[j + 1] = array[j];
-        insertion.ar[indexJ + 1] = insertion.ar[indexJ];
+        insertion_arr[indexJ + 1] = insertion_arr[indexJ];
         indexJ = indexJ - 1;
     }
 
-    insertion.ar[indexJ + 1] = current;
+    insertion_arr[indexJ + 1] = current;
     indexI++;
 }
 
@@ -82,7 +84,20 @@ function insertionPass()
 // prints passes of each algo after pause
 function selectionPass() 
 {
-    
+    // Sets minIndex to indexS (i in a for loop)
+    let minIndex = indexS;
+
+    // Find min element in unsorted array
+    for (var indexJ = indexS + 1; indexJ < len; indexJ++) {
+        if (selection_arr[indexJ] < selection_arr[minIndex]) {
+            minIndex = indexJ;
+        }
+    }
+
+    // Swap function
+    var temp = selection_arr[minIndex];
+    selection_arr[minIndex] = selection_arr[indexS];
+    selection_arr[indexS] = temp;
 }
 
 // prints passes of each algo after pause
