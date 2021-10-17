@@ -115,9 +115,41 @@ function mergePass()
 // prints passes of each algo after pause
 function quickPass() 
 {
-    
+    var high = quick_arr.length - 1;
+    var low  = 1;
+  
+    Partition(low, high);
 }
-
+  
+function Partition(l, h)
+{
+  var pivot = quick_arr[0]
+  
+  while(l <= h)
+  {
+      while(quick_arr[l] < pivot)
+      {
+          l++;
+      }
+      while(quick_arr[h] > pivot)
+      {
+          h--;
+      }
+      if (l <= h)
+      {
+          swap(l,h)
+      }
+  }
+  swap(pivot,h)
+}
+  
+function quickSwap(i, j)
+{
+  var temp = quick_arr[i];
+  quick_arr[i] = quick_arr[j];
+  quick_arr[j] = temp;
+}
+ 
 // merge function for mergeSort
 function merge() 
 {
