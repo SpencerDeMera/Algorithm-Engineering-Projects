@@ -12,7 +12,7 @@ var g_button; // Button for my input box.
 var array = []; // array for all input hexadecimal string
 var len = 16; // array length
 array.length = len; // set array length
-
+var flag = true;
 
 var insertion_arr = array.split("");
 var indexI = 0;
