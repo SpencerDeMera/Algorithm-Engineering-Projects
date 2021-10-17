@@ -137,10 +137,10 @@ function Partition(l, h)
         }
         if (l <= h)
         {
-            swap(l,h)
+            quickSwap(l,h)
         }
     }
-    swap(pivot,h)
+    quickSwap(pivot,h)
 }
 
 function quickSwap(i, j)
