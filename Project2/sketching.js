@@ -15,8 +15,7 @@ array.length = len; // set array length
 
 
 var insertion_arr = array.split("");
-var insertion_index1 = 0;
-var insertion_index2 = -1;
+var indexI = 0;
 
 var selection_arr = array.split("");
 var poresort_arr = array.split("");
@@ -63,23 +62,22 @@ function draw_algos()
 }
 
 // prints passes of each algo after pause
-function insertionPass() 
+function insertionPass()
 {
-    while (insertion_index1 < insertion_arr.length())
-    {
-        var current = insertion_arr[insertion_index1];
-        while (insertion_index2 >= 0 && insertion_arr[insertion_index2] > current)
-        {
-            insertion_arr[insertion_index2 + 1] = insertion_arr[insertion_index2];
-            insertion_index2 = insertion_index2 - 1;
-        }
-        insertion_arr[insertion_index2 + 1] = current;
-        insertion_index1++;
-        insertion_index2++;
+    let current = insertion.ar[insertion.indexI];
+    let indexJ = insertion.indexI - 1;
 
-        break;
+    while(indexJ >= 0 && insertion.ar[indexJ] > current)
+    {
+        // array[j + 1] = array[j];
+        insertion.ar[indexJ + 1] = insertion.ar[indexJ];
+        indexJ = indexJ - 1;
     }
+
+    insertion.ar[indexJ + 1] = current;
+    indexI++;
 }
+
 
 // prints passes of each algo after pause
 function selectionPass() 
