@@ -21,6 +21,8 @@ var selection_arr = array.split("");
 var indexS = 0;
 
 var poresort_arr = array.split("");
+var indexP = 0;
+
 var merge_arr = array.split("");
 var quick_arr = array.split("");
 
@@ -103,7 +105,19 @@ function selectionPass()
 // prints passes of each algo after pause
 function porePass() 
 {
-    
+    if (indexP % 2 == 0) {
+        indexP = 0;
+    } else {
+        indexP = 1;
+    }
+    for (indexP; indexP < len; indexP = indexP + 2) {
+        if(poresort_arr[indexP] > poresort_arr[indexP+1]){
+            var current = pore.array[i];
+            poresort_arr[indexP] = poresort_arr[indexP+1];
+            poresort_arr[indexP+1] = current;
+        }
+    }
+
 }
 
 // prints passes of each algo after pause
