@@ -1,4 +1,5 @@
-# CPSC 335 Algorithm Engineering
+# Repo for
+# Various Algorithm Engineering Projects
 
 - - - -
 
